@@ -1,0 +1,14 @@
+[9:33 am, 20/06/2020] Be Positive😀: Login as a team member
+navigate to My Info module
+click on Dependents
+click on Add button
+Enter required details and click on Save button
+Verify the added dependent details are displayed in Dependents Table
+[9:36 am, 20/06/2020] Be Positive😀: Assignment: 2:
+Login as a team member
+navigate to My Info module
+click on Dependents
+click on Add button
+Enter required details and click on Save button
+Verify the added dependent details are displayed in Dependents Table
+Delete the dependent and verify the dependent is deleted from table

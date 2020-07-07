@@ -1,0 +1,162 @@
+	public static boolean clickElement(WebElement element) 
+	{
+		boolean staus = true;
+		try {
+			element.click();
+		}
+		
+		catch(Exception e) {
+			staus = false;
+		}
+		
+		return staus;
+	}
+		
+	public static boolean setEditValue(WebElement element, String value) 
+	{
+		boolean status = true;
+		try{
+			element.click();
+			element.clear();
+			element.sendKeys(value);
+			element.sendKeys(Keys.ESCAPE);
+		}
+		catch(Exception e) {
+			status = false;
+		}
+		return status;
+	}
+		
+	//Select drop down text by visible text
+	public static  boolean selectVisibleText(WebElement element, String visibleText)
+	{
+		boolean status = true;
+		try
+		{
+			Select selItem = new Select(element);
+			selItem.selectByVisibleText(visibleText);
+		}
+		catch(Exception e) {
+			status = false;
+		}
+		return status;
+	}	
+	
+	//Select drop down text by index
+	public static  boolean selectIndex(WebElement element, int index)
+	{
+		boolean status = true;
+		try
+		{
+			Select selItem = new Select(element);
+			selItem.selectByIndex(index);
+		}
+		catch(Exception e) {
+			status = false;
+		}
+		return status;
+	}	
+	
+	//Select drop down text by value
+	public static  boolean selectValue(WebElement element, String value)
+	{
+		boolean status = true;
+		try
+		{
+			Select selItem = new Select(element);
+			selItem.selectByValue(value);
+		}
+		catch(Exception e) {
+			status = false;
+		}
+		return status;
+	}
+	
+	//Move from one element to another element
+	public static boolean moveToElement(WebDriver driver, WebElement element) 
+	{
+		boolean status = true;
+		try{
+			Actions ele = new Actions(driver);
+			ele.moveToElement(element);
+			ele.build().perform();
+		}
+		catch(Exception e) {
+			status = false;
+		}
+		return status;
+	}
+	
+	//Display the visible text of the element
+	public static boolean getVisibleText(WebElement element)
+	{
+		boolean status = true;
+		try 
+		{
+		String disVal = element.getText();
+		System.out.println("Displayed value : " + disVal);
+		}
+		catch(Exception e) {
+			status = false;
+		}
+		return status;
+	}
+	
+	//Display value of the attribute passed as parameter
+	public static boolean getAtributeValue(WebElement element)
+	{
+		boolean status = true;
+		try 
+		{
+		String atrVal = element.getAttribute("value");
+		System.out.println("Displayed value : " + atrVal);
+		}
+		catch(Exception e) {
+			status = false;
+		}
+		return status;
+	}
+	
+	
+	//verify selected element/ check box
+	public static boolean isSelect(WebElement element)
+	{
+		boolean status = true;
+		try 
+		{
+			element.isSelected();
+		}
+		catch(Exception e) {
+			status = false;
+		}
+		return status;
+	}
+	
+	//verify display element
+	public static boolean isDisplay(WebElement element)
+	{
+		boolean status = true;
+		try 
+		{
+			element.isDisplayed();
+		}
+		catch(Exception e) {
+			status = false;
+		}
+		return status;
+	}
+	
+	//verify element is enabled or not 
+	public static boolean isEnable(WebElement element)
+	{
+		boolean status = true;
+		try 
+		{
+			element.isEnabled();
+		}
+		catch(Exception e) {
+			status = false;
+		}
+		return status;
+	}
+	
